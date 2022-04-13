@@ -67,10 +67,10 @@ question8Answers.forEach(function (answer) {
 
 function checkQOne(event) {
   console.log(event);
-  if (event.path[0].className === "qone-answer-one") {
+  if (event.path[0].className === "qone-answer-one answer") {
     checkAnswer(".qone-answer-one", "incorrect", one, two);
     console.log(score);
-  } else if (event.path[0].className === "qone-answer-two") {
+  } else if (event.path[0].className === "qone-answer-two answer") {
     checkAnswer(".qone-answer-two", "correct", one, two);
     score++;
     console.log(score);
@@ -82,10 +82,10 @@ function checkQOne(event) {
 
 function checkQTwo(event) {
   console.log(event);
-  if (event.path[0].className === "qtwo-answer-one") {
+  if (event.path[0].className === "qtwo-answer-one answer") {
     checkAnswer(".qtwo-answer-one", "incorrect", two, three);
     console.log(score);
-  } else if (event.path[0].className === "qtwo-answer-two") {
+  } else if (event.path[0].className === "qtwo-answer-two answer") {
     checkAnswer(".qtwo-answer-two", "incorrect", two, three);
     console.log(score);
   } else {
@@ -97,11 +97,11 @@ function checkQTwo(event) {
 
 function checkQThree(event) {
     console.log(event);
-    if (event.path[0].className === "qthree-answer-one") {
+    if (event.path[0].className === "qthree-answer-one answer") {
     checkAnswer(".qthree-answer-one", "correct", three, four);
     score++;
     console.log(score);
-    } else if (event.path[0].className === "qthree-answer-two") {
+    } else if (event.path[0].className === "qthree-answer-two answer") {
     checkAnswer(".qthree-answer-two", "incorrect", three, four);
     console.log(score);
     } else {
@@ -112,11 +112,11 @@ function checkQThree(event) {
 
 function checkQFour(event) {
     console.log(event);
-    if (event.path[0].className === "qfour-answer-one") {
+    if (event.path[0].className === "qfour-answer-one answer") {
     checkAnswer(".qfour-answer-one", "correct", four, five);
     score++;
     console.log(score);
-    } else if (event.path[0].className === "qfour-answer-two") {
+    } else if (event.path[0].className === "qfour-answer-two answer") {
     checkAnswer(".qfour-answer-two", "incorrect", four, five);
     console.log(score);
     } else {
@@ -127,11 +127,11 @@ function checkQFour(event) {
 
 function checkQFive(event) {
     console.log(event);
-    if (event.path[0].className === "qfive-answer-one") {
+    if (event.path[0].className === "qfive-answer-one answer") {
     checkAnswer(".qfive-answer-one", "correct", five, six);
     score++;
     console.log(score);
-    } else if (event.path[0].className === "qfive-answer-two") {
+    } else if (event.path[0].className === "qfive-answer-two answer") {
     checkAnswer(".qfive-answer-two", "incorrect", five, six);
     console.log(score);
     } else {
@@ -142,10 +142,10 @@ function checkQFive(event) {
 
 function checkQSix(event) {
     console.log(event);
-    if (event.path[0].className === "qsix-answer-one") {
+    if (event.path[0].className === "qsix-answer-one answer") {
     checkAnswer(".qsix-answer-one", "incorrect", six, seven);
     console.log(score);
-    } else if (event.path[0].className === "qsix-answer-two") {
+    } else if (event.path[0].className === "qsix-answer-two answer") {
     checkAnswer(".qsix-answer-two", "incorrect", six, seven);
     console.log(score);
     } else {
@@ -157,10 +157,10 @@ function checkQSix(event) {
 
 function checkQSeven(event) {
     console.log(event);
-    if (event.path[0].className === "qseven-answer-one") {
+    if (event.path[0].className === "qseven-answer-one answer") {
     checkAnswer(".qseven-answer-one", "incorrect", seven, eight);
     console.log(score);
-    } else if (event.path[0].className === "qseven-answer-two") {
+    } else if (event.path[0].className === "qseven-answer-two answer") {
     checkAnswer(".qseven-answer-two", "correct", seven, eight);
     score++;
     console.log(score);
@@ -172,7 +172,7 @@ function checkQSeven(event) {
 
 function checkQEight(event) {
     console.log(event);
-    if (event.path[0].className === "qeight-answer-one") {
+    if (event.path[0].className === "qeight-answer-one answer") {
     checkAnswer(".qeight-answer-one", "incorrect", eight, lastPage);
     console.log(score);
     } else {
@@ -190,9 +190,12 @@ function checkAnswer(question, answer, currentQ, nextQ) {
     currentQ.style.display = "none";
     nextQ.style.display = "block";
   }, 2000);
+  if (nextQ === lastPage) {
+      document.querySelector(".final-score").innerText = `You scored ${score} out of 8!`;
+  }
 }
 
-document.querySelector(".final-score").innerText = `You scored ${score} out of 8!`;
+// document.querySelector(".final-score").innerText = `You scored ${score} out of 8!`;
 
 
 

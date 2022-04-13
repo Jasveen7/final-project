@@ -40,9 +40,10 @@ body {
 @media (max-width: 480px) {
     .landing-page h1 {
         font-size: 40px;
+        font-family: 'Manjari', sans-serif;
     }
-    .fa-solid {
-        font-size: -10em;
+    .fa-solid.fa-play {
+        font-size: 30px;
     }
 }
 
@@ -70,6 +71,7 @@ body {
     margin-top: 15%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 100px;
     font-family: 'Manjari', sans-serif;
     animation: fadein 4s;
 
@@ -115,11 +117,12 @@ p {
     p {
         font-size: 15px;
         height: auto;
+        border: 2px solid grey;
+        padding: 10px 5px;
     }
     h2 {
         font-size: 20px;
     }
-
 }
 
 .question.one { 
@@ -163,11 +166,17 @@ p {
     text-align: center;
     height: 50%;
     width: 50%;
-    top: 15%;
+    top: 25%;
     left: 25%;
     position: absolute;
     transition: ease 0.3s;
     animation: bounce 0.9s;
+}
+
+@media (max-width: 480px) {
+    .final-score {
+        font-size: 50px;
+    }
 }
 
 .incorrect {
