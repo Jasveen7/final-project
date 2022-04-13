@@ -63,6 +63,8 @@ body {
     }
 }
 
+/* Questions Styling */
+
 .question {
     display: visible;
     text-align: center;
@@ -157,6 +159,8 @@ p {
     display: none;
 }
 
+/* Results Page */
+
 .final-score {
     display: none;
     font-family: 'Manjari', cursive;
@@ -179,13 +183,16 @@ p {
     }
 }
 
+/* Conditional Styling */
+
 .incorrect {
     background-color: red;
 }
 
 .correct {
-    background-color: green;
+    background-color: #4AC146;
 }
+
 
 
 
